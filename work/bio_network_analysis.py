@@ -1,16 +1,19 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
+import japanize_matplotlib
 
 import networkx as nx
 
-from causalnex.structure import StructureModel
 from causalnex.structure.pytorch import from_pandas
+from causalnex.structure import StructureModel
 from causalnex.network import BayesianNetwork
-from causalnex.evaluation import classification_report
-from causalnex.evaluation import roc_auc
+from causalnex.evaluation import classification_report, roc_auc
+from causalnex.inference import InferenceEngine
+
 
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import KBinsDiscretizer, StandardScaler
+from sklearn.preprocessing import StandardScaler, KBinsDiscretizer
 
 import optuna
 
